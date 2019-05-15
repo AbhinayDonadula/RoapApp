@@ -1,0 +1,54 @@
+body {
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.roap_header {
+  background: #2075bc;
+  color: #fff;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-shadow: -2px 10px 34px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 10px 34px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 10px 34px -11px rgba(0, 0, 0, 0.75);
+}
+
+.roap_form {
+  padding: 60px;
+  -webkit-box-shadow: -2px 10px 34px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 10px 34px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 10px 34px -11px rgba(0, 0, 0, 0.75);
+  margin-top: 35px;
+}
+
+.checklist__date,
+.created_by {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+hr.hr {
+  border: 1.5px solid #2075bc;
+  margin: 0;
+  width: 130px;
+}
+
+.section__heading {
+  font-size: 24px;
+  color: #2075bc;
+}
+
+.equip__container {
+  display: flex;
+  justify-content: center;
+}
+
+.roap__date {
+  width: 33%;
+}
+
+.equip__label {
+  margin-bottom: 35px;
+}
