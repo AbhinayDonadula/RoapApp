@@ -1,2 +1,7 @@
+.next/*
 node_modules
-.next
+.next/*/*
+.next/server/static/development/pages/next/dist/pages/_error.js.map
+.next/server/pages-manifest.json
+.next/react-loadable-manifest.json
+.next/build-manifest.json

@@ -74,7 +74,7 @@ const Checklist = () => {
           <TextArea />
         </div>
       </div>
-      {/* Run kronos */}
+      {/* Work activities */}
       <div>
         <div className="company__laptop failed">
           <TextArea
@@ -83,10 +83,6 @@ const Checklist = () => {
           />
         </div>
       </div>
-      {/* <div className="manager__container">
-        <label className="label">Manager:</label>
-        <span className="manager__name">Dhaval Parekh</span>
-      </div> */}
     </React.Fragment>
   );
 };
