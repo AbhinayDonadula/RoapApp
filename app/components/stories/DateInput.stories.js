@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import DateInput from '../DateInput';
 
 const styles = {
@@ -21,6 +21,11 @@ storiesOf('DateInput', module)
   .add('with Prefill', () => <DateInput preFill="01/01/1988" />, {
     notes: 'We can add notes about the component here.'
   });
+storiesOf('DateInput', module)
+  .addDecorator(CenterDecorator)
+  .add('with help text', () => <DateInput helpText="MM/DD/YYYY" />, {
+    notes: 'We can add notes about the component here.'
+  });
 
 storiesOf('DateInput', module)
   .addDecorator(CenterDecorator)
@@ -30,4 +35,12 @@ storiesOf('DateInput', module)
 storiesOf('DateInput', module)
   .addDecorator(CenterDecorator)
   .addDecorator(withKnobs)
-  .add('All props', () => <DateInput disabled={boolean('Disabled', false)} />);
+  .add('All props', () => (
+    <DateInput
+      disabled={boolean('Disabled', false)}
+      loading={boolean('Loading', false)}
+      helpText={text('Help Text', 'MM/DD/YYYY')}
+      placeholder={text('Placeholder', '__/__/____')}
+      preFill={text('prefill with', '')}
+    />
+  ));

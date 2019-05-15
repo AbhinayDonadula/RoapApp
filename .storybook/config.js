@@ -1,6 +1,7 @@
 import { configure, addParameters } from '@storybook/react';
 import { setConsoleOptions } from '@storybook/addon-console';
 import '@storybook/addon-console';
+import '../static/css/app.css';
 
 addParameters({
   options: {

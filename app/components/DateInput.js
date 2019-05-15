@@ -109,7 +109,7 @@ const DateInput = props => {
 DateInput.defaultProps = {
   name: 'date',
   placeholder: '__/__/____',
-  helpText: 'MM/DD/YYYY',
+  helpText: '',
   className: 'form-control',
   errMsg: 'Please enter valid date (mm/dd/yyyy)',
   successMsg: 'Date is valid',
