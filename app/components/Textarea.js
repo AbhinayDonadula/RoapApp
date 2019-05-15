@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Input from './Input';
 
-const TextInput = props => {
+const TextArea = props => {
   const { dispatchToParent, preFill } = props;
   const [val, setVal] = useState(preFill);
 
@@ -21,22 +20,12 @@ const TextInput = props => {
         {props.label.length ? (
           <label className="label">{props.label}</label>
         ) : null}
-        <Input
-          type="text"
-          name={props.name}
-          placeholder={props.placeholder}
-          className="input"
+        <textarea
+          className={`textarea ${props.className}`}
+          placeholder="comments"
           onChange={handleChange}
           value={val}
-          style={props.style}
         />
-        {props.iconClass.length ? (
-          <span className="kt-input-icon__icon kt-input-icon__icon--right">
-            <span>
-              <i className={`${props.iconClass}`} />
-            </span>
-          </span>
-        ) : null}
       </div>
       {props.helpText.length ? (
         <span className="form-text text-muted">{props.helpText}</span>
@@ -45,19 +34,18 @@ const TextInput = props => {
   );
 };
 
-TextInput.defaultProps = {
+TextArea.defaultProps = {
   name: 'name',
   placeholder: '',
   helpText: '',
   className: 'form-control',
   iconClass: '',
   label: '',
-  style: {},
   preFill: '',
   dispatchToParent: () => {}
 };
 
-TextInput.propTypes = {
+TextArea.propTypes = {
   dispatchToParent: PropTypes.func,
   helpText: PropTypes.string,
   label: PropTypes.string,
@@ -65,8 +53,7 @@ TextInput.propTypes = {
   className: PropTypes.string,
   iconClass: PropTypes.string,
   name: PropTypes.string,
-  preFill: PropTypes.string,
-  style: PropTypes.object
+  preFill: PropTypes.string
 };
 
-export default TextInput;
+export default TextArea;

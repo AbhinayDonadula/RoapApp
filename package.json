@@ -9,9 +9,9 @@
     "dev": "nodemon --exec npm run restart",
     "restart": "rimraf dist && npm run build && npm run start",
     "start": "node dist/index",
-    "next:dev": "next ./app -p 3009",
+    "next:dev": "next -p 3009",
     "next:build:prod": "next build",
-    "next:start:prod": "next start"
+    "next:start:prod": "next start ./app/ -p %PORT%"
   },
   "dependencies": {
     "@storybook/addon-actions": "^5.0.11",
@@ -23,6 +23,7 @@
     "acorn": "^6.1.1",
     "await-to-js": "^2.1.1",
     "babel-preset-next": "^1.2.0",
+    "cross-env": "^5.2.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-react-hooks": "^1.6.0",
     "express": "^4.16.4",

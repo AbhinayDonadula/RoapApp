@@ -48,7 +48,7 @@ const DateInput = props => {
   }
 
   return (
-    <React.Fragment className="field">
+    <React.Fragment>
       {props.label.length ? (
         <label className="label">{props.label}</label>
       ) : null}
