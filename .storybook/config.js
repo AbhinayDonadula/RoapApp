@@ -1,9 +1,13 @@
-import { configure, addParameters } from '@storybook/react';
+import { configure, addParameters, addDecorator } from '@storybook/react';
 import { setConsoleOptions } from '@storybook/addon-console';
+import { withInfo } from '@storybook/addon-info';
 import '@storybook/addon-console';
 import '../static/css/app.css';
 
+addDecorator(withInfo);
+
 addParameters({
+  viewport: { defaultViewport: 'desktop' },
   options: {
     name: 'Roap App',
     isFullscreen: false,

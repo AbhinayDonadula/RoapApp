@@ -13,14 +13,14 @@ const CenterDecorator = storyFn => (
 );
 
 storiesOf('Button', module)
+  .addDecorator(CenterDecorator)
+  .addDecorator(withKnobs)
   .addParameters({
     backgrounds: [
       { name: 'background 1', value: '#00aced', default: true },
       { name: 'background 2', value: '#3b5998' }
     ]
   })
-  .addDecorator(CenterDecorator)
-  .addDecorator(withKnobs)
   .add('All props', () => (
     <Button animated={boolean('Animated', true)}>
       {text('Button Name', 'Submit')}
