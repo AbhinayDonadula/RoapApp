@@ -11,7 +11,7 @@
     "start": "node dist/index",
     "next:dev": "next -p 3009",
     "next:build:prod": "next build",
-    "next:start:prod": "next start ./app/ -p %PORT%"
+    "next:start:prod": "next start -p %PORT%"
   },
   "dependencies": {
     "@storybook/addon-actions": "^5.0.11",

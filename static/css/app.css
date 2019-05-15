@@ -32,7 +32,7 @@ body {
 hr.hr {
   border: 1.5px solid #2075bc;
   margin: 0;
-  width: 130px;
+  width: 120px;
 }
 
 .section__heading {
@@ -222,4 +222,8 @@ input[type='radio'] {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+}
+
+.roap_form {
+  margin-bottom: 50px;
 }
